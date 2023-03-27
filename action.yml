@@ -17,5 +17,6 @@ inputs:
 runs:
   using: "docker"
   image: "docker://plantuml/plantuml:latest"
+  entrypoint: 'sh -c "java -jar /app/plantuml.jar -headless $*"'
   args:
     - ${{ inputs.args }}
